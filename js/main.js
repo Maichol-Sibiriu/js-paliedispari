@@ -3,15 +3,12 @@
 var user = prompt("inserisci una parola");
 console.log(user);
 // inversione parola
-// function invert(label) {
-//
-//   var nameReverse = "";
-//
-//   var nameReverse = label.split("").reverse().join("");
-//
-//   return nameReverse;
-// }
+function invert(label) {
 
+  var nameReverse = label.split("").reverse().join("");
+
+  return nameReverse;
+}
 // inversione parola con il loop
 function invert(label) {
   var nameReverse = "";
@@ -21,8 +18,13 @@ function invert(label) {
   }
   return nameReverse;
 }
-
-
 // richiamo funzione
 var invertLabel = invert(user);
 console.log(invertLabel);
+// comparazione parole
+if (user == invertLabel) {
+  console.log("la parola e' palindroma");
+}
+else {
+  console.log("la parola non e' palindroma");
+}
