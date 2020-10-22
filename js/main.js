@@ -3,12 +3,12 @@
 var user = prompt("inserisci una parola");
 console.log(user);
 // inversione parola
-function invert(label) {
-
-  var nameReverse = label.split("").reverse().join("");
-
-  return nameReverse;
-}
+// function invert(label) {
+//
+//   var nameReverse = label.split("").reverse().join("");
+//
+//   return nameReverse;
+// }
 // inversione parola con il loop
 function invert(label) {
   var nameReverse = "";
@@ -28,3 +28,32 @@ if (user == invertLabel) {
 else {
   console.log("la parola non e' palindroma");
 }
+// esercizio funzioni pari e dispari
+// scelta pari o dispari utente
+var palyer = prompt("scegli pari o dispari");
+// scelta numero utente
+var numberPlayer = parseInt( prompt("scegli un numero da 1 a 5") );
+// scelta numero computer
+function randomPc(min, max) {
+  var random = Math.floor( Math.random() * (max - min + 1) ) + min ;
+  return random;
+}
+
+
+
+
+
+function sum(number) {
+   var result = numP + numC;
+   return result;
+}
+
+function equalOdd(compare) {
+  if (sum % 2 == 0) {
+    return equal;
+  }
+
+  return odd;
+}
+// richiamo funzione
+var
