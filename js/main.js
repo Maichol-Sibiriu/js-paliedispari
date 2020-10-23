@@ -37,35 +37,35 @@ var palyer = prompt("scegli pari o dispari");
 var numberPlayer = parseInt( prompt("scegli un numero da 1 a 5") );
 // scelta numero computer
 function randomPc(min, max) {
-  var random = Math.floor( Math.random() * (5 + 1) ) + 1 ;
+  var random = Math.floor( Math.random() * (max - min + 1) ) + min ;
   return random;
 }
 // richiamo funzione computer
-var computer = randomPc(numberPlayer);
+var computer = randomPc(1,5);
 console.log(computer);
+
 // somma numero utente con computer
 function sum(number) {
    var result = numberPlayer + computer;
    return result;
 }
+
 // richiamo funzione somma
 var addition = sum(numberPlayer, computer);
 console.log(addition);
+
 // stabiliamo il valore somma
-function equalOdd(compare) {
-  if (compare % 2 == 0) {
-    return equal;
-  }
-  return odd;
+if (addition % 2 == 0) {
+  var equal;
 }
-function value(winner) {
-   if ( (equal == palyer) || (odd == player) ) {
-     return winPlayer;
-   }
-   return winComputer;
+else {
+  var odd;
 }
-// richiamo funzione
-var win = value(winPlayer);
-console.log(win);
-var lose = value(winComputer);
-console.log(lose);
+
+// stabilisci vincitore
+if (addition === palyer) {
+  console.log("win player");
+}
+else {
+  console.log("win computer");
+}
